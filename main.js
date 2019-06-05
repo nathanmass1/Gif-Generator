@@ -26,13 +26,10 @@ $(function () {
 
   async function getGif(query) {
     let apiURL = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=G8vYr8T6crBB6uv6azGMtVDn2RLbmK6T`;
-    let results = await $.get(apiURL, function (res) {
-
+    await $.get(apiURL, function (res) {
       showGif(res.data[0].images.original.url);
       // console.log(res.data[0].images.original.url);
-
       // return ;
-
     });
   }
 
