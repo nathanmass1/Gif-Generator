@@ -3,7 +3,6 @@ $(function () {
   $(".btn-primary").on("click", function (evt) {
     evt.preventDefault();
     let $query = $(".search-bar").val();
-    // console.log($query);
 
 
     let gif = getGif($query);
@@ -26,7 +25,7 @@ $(function () {
 
 
   async function getGif(query) {
-    let apiURL = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=dc6zaTOxFJmzC`;
+    let apiURL = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=G8vYr8T6crBB6uv6azGMtVDn2RLbmK6T`;
     let results = await $.get(apiURL, function (res) {
 
       showGif(res.data[0].images.original.url);
