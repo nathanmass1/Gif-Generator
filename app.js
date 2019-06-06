@@ -27,7 +27,7 @@ $("form").on("submit", function (e) {
   $searchInput.val("");
 
   $.get(
-    "http://api.giphy.com/v1/gifs/search",
+    "//api.giphy.com/v1/gifs/search",
     { q: searchTerm, api_key: "G8vYr8T6crBB6uv6azGMtVDn2RLbmK6T" },
     addGif);
 });
